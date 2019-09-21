@@ -6,8 +6,8 @@ cd /usr/src
 # wget -N https://developer.nvidia.com/embedded/dlc/l4t-sources-32-1-JAX-TX2
 # wget -N https://developer.nvidia.com/embedded/dlc/l4t-sources-31-1-0
 # l4t-sources-31-1-0 is a tbz2 file
-wget -N https://developer.download.nvidia.com/embedded/L4T/r32_Release_v1.0/jax-tx2/BSP/JAX-TX2-public_sources.tbz2
-sudo tar -xvf JAX-TX2-public_sources.tbz2 public_sources/kernel_src.tbz2
+wget -N https://developer.nvidia.com/embedded/dlc/r32-2-1_Release_v1.0/TX2-AGX/sources/public_sources.tbz2
+sudo tar -xvf public_sources.tbz2 public_sources/kernel_src.tbz2
 tar -xvf public_sources/kernel_src.tbz2
 #tar -xvf l4t-sources-32-1-JAX-TX2 public_sources/kernel_src.tbz2
 #tar -xvf public_sources/kernel_src.tbz2
