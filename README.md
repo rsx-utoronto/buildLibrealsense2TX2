@@ -59,6 +59,13 @@ Note that you will need to recompile the library and application for these to ta
 
 Release Notes:
 
+November, 2019
+* NVIDIA Jetson TX2
+* JetPack 4.2.3
+* L4T 32.1
+* 32.2.3
+* Tested on D435i
+
 May, 2019
 
 * Initial Release - v0.8
