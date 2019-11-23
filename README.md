@@ -1,7 +1,7 @@
 # buildLibrealsense2TX2
 Build librealsense 2.0 library on the NVIDIA Jetson TX2 Developer Kit. Intel RealSense D400 series cameras.
 
-This is for version L4T 32.2.1 (JetPack 4.2.2), librealsense v2.22.0.
+This is for version L4T 32.2.3 (JetPack 4.2.3), librealsense v2.29.0.
 
 Reference link:
 
@@ -21,13 +21,17 @@ Because the TX2 with flashed Jetpack4.2 run kernel version 4.9 and librealsense 
 
 In order to build and install the patched kernel Image and modules:
 
-$ ./buildPatchedKernel.sh
+```
+./buildPatchedKernel.sh
+```
 
 On the stock Jetson TX2 install, there is no zImage in the boot directory.So we just copy the Image file over.Note that if you are compiling on an external device, like a SSD, you should probably copy this over to the internal eMMC if that is where the Jetson boots.
 
 NOTE:Make sure where the Image file on TX2 turely is,and cover to it by Image file under image directory.Remember backup the Image file on TX2 before you cover to it.
 
-$ sudo cp ./image/Image /boot
+```
+sudo cp ./image/Image /boot
+```
 
 Then,reboot your device.
 
@@ -37,7 +41,9 @@ You are then ready to install librealsense 2.
 
 Run the convenience script:
 
-$ ./installLibrealsense.sh
+```
+./installLibrealsense.sh
+```
 
 This will build the librealsense libraries and examples. The examples will be placed in /usr/local/bin.
 
@@ -45,11 +51,20 @@ Application Patching
 
 Currently there are issues with the realsense-viewer application. The first issue is that sometimes when using large frame sizes, incomplete frames are received. This is a library wide issue, not strictly limited to the realsense-viewer app. The second issue is that one of the processes tends to block in the realsense-viewer app. There are two work around patches provided here. The patches may be applied with:
 
-$ ./patchApplication.sh
+```
+./patchApplication.sh
+```
 
 Note that you will need to recompile the library and application for these to take effect.
 
 Release Notes:
+
+November, 2019
+* NVIDIA Jetson TX2
+* JetPack 4.2.3
+* L4T 32.1
+* 32.2.3
+* Tested on D435i
 
 May, 2019
 
@@ -58,7 +73,3 @@ May, 2019
 * JetPack 4.2 (Developers Preview)
 * L4T 32.1
 * Tested on D435i and D435 Intel Realsense Cameras
-
-
-
-
