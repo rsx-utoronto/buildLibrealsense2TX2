@@ -66,4 +66,3 @@ May, 2019
 * JetPack 4.2 (Developers Preview)
 * L4T 32.1
 * Tested on D435i and D435 Intel Realsense Cameras
-* 
