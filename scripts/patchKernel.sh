@@ -36,5 +36,5 @@ echo -e "\e[32mApplying realsense-hid patch\e[0m"
 patch -p1 < ${INSTALL_DIR}/patches/realsense-hid-ubuntu-bionic-TX2-4.9.140.patch
 echo -e "\e[32mpowerlinefrequency-control-fix patch\e[0m"
 patch -p1 < ${LIBREALSENSE_DIR}/scripts/realsense-powerlinefrequency-control-fix.patch
-
-
+echo -e "\e[hdcp-warning patch\e[0m"
+patch -p1 < ${LIBREALSENSE_DIR}/scripts/hdcp-warning.patch
