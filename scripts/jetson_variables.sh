@@ -86,6 +86,8 @@ if [ -f /etc/nv_tegra_release ]; then
         esac        
     elif [ "$JETSON_BOARD" = "TX2" ] ; then
         case $JETSON_L4T in
+                "32.3.1")
+                    JETSON_JETPACK="4.3" ;;
             "32.2.3")
                     JETSON_JETPACK="4.2.3" ;;
             "32.2.1")
