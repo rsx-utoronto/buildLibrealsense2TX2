@@ -1,10 +1,11 @@
---- /usr/src/kernel/nvidia/drivers/video/tegra/dc/hdcp/hdmihdcp.c       2019-11-05 16:27:50.000000000 -0$
-+++ /usr/src/kernel/nvidia/drivers/video/tegra/dc/hdcp/hdmihdcp.c.edited        2020-03-02 20:59:53.9640$
+diff -Naur /usr/src/kernel/nvidia/drivers/video/tegra/dc/hdcp/hdmihdcp.c /usr/src/kernel/nvidia/drivers/video/tegra/dc/hdcp_new/hdmihdcp.c
+--- /usr/src/kernel/nvidia/drivers/video/tegra/dc/hdcp/hdmihdcp.c	2019-11-05 16:27:50.000000000 -0500
++++ /usr/src/kernel/nvidia/drivers/video/tegra/dc/hdcp_new/hdmihdcp.c	2018-01-28 11:53:37.724000000 -0500
 @@ -1937,7 +1937,6 @@
-        u16 rx_status = 0;
-        uint64_t *pkt = NULL;
-        int err = 0;
--       unsigned char nonce[HDCP_NONCE_SIZE];
+ 	u16 rx_status = 0;
+ 	uint64_t *pkt = NULL;
+ 	int err = 0;
+-	unsigned char nonce[HDCP_NONCE_SIZE];
  
-        pkt = kzalloc(PKT_SIZE, GFP_KERNEL);
+ 	pkt = kzalloc(PKT_SIZE, GFP_KERNEL);
  
