@@ -1,6 +1,6 @@
 #!/bin/bash
 # Applies application patches for librealsense2 on a Jetson TX2 Developer Kit
-
+INSTALL_DIR=$PWD
 echo "${green}Applying Model-Views Patch${reset}"
 # The render loop of the post processing does not yield; add a sleep
 patch -p1 -i $INSTALL_DIR/patches/model-views.patch
