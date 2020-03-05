@@ -3,8 +3,8 @@
 INSTALL_DIR=$PWD
 echo "${green}Applying Model-Views Patch${reset}"
 # The render loop of the post processing does not yield; add a sleep
-patch -d ~/libreasense -p1 -i $INSTALL_DIR/patches/model-views.patch
+patch -d ~/libreaslense -p1 -i $INSTALL_DIR/patches/model-views.patch
 
 echo "${green}Applying Incomplete Frames Patch${reset}"
 # The Jetson tends to return incomplete frames at high frame rates; suppress error logging
-patch -d ~/libreasense -p1 -i $INSTALL_DIR/patches/incomplete-frame.patch
+patch -d ~/librealsense -p1 -i $INSTALL_DIR/patches/incomplete-frame.patch
