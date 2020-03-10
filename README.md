@@ -17,9 +17,8 @@ Because the TX2 with flashed Jetpack 4.2 running kernel version 4.9 and libreals
 
 On the stock Jetson TX2 install, there is no Image in the boot directory. So we just copy the Image file over. Note that if you are compiling on an external device, like a SSD, you should probably copy this over to the internal eMMC if that is where the Jetson boots.
 
-NOTE:Make sure where the Image file on TX2 turely is, and cover to it by Image file under image directory. Remember backup the Image file on TX2 before you cover to it.
+NOTE: Make sure where the Image file on TX2 turely is, and cover to it by Image file under image directory. Remember backup the Image file on TX2 before you cover to it.
 
-*Do not run as sudo*
 ```
 sudo cp ./image/Image /boot
 ```
